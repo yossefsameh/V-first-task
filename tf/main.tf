@@ -4,3 +4,10 @@ module "mynetwork" {
   subnet-name = "restricted-subnet"
   subnet-cidr = "10.0.2.0/24"
 }
+
+module "mycloudstorage" {
+  source = "./cloudstorage"
+  for_each = toset(var.bucket-name)
+  bucket-name = each.key
+  bucket-location = var.bucket-location
+}
