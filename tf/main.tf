@@ -11,3 +11,9 @@ module "mycloudstorage" {
   bucket-name = each.key
   bucket-location = var.bucket-location
 }
+
+module "mybigquery" {
+  source = "./bigquery"
+  for_each = toset(var.dataset-name)
+  dataset-name = each.key
+}
