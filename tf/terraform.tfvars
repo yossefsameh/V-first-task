@@ -1,3 +1,12 @@
+vpc-name = "my-vpc"
+subnet-name = "restricted-subnet"
+subnet-cidr = "10.0.2.0/24"
 bucket-name = ["my-iti-bucket", "my-iti-bucket2","my-iti-bucket3"]
 bucket-location = "US"
 dataset-name = ["fstdataset","scddataset","thirddataset"]
+vm-name         = "my-vm"
+vm-type = "n1-standard-1"
+vm-zone         = "asia-east1-b"
+vm-os = "debian-cloud/debian-11"
+account-id = ["mygs-sa","mybigquery-sa","clusteradmin-sa","storageadmin-sa"]
+binding-project = "abdelrahman-377520"

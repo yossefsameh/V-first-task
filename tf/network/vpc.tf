@@ -14,7 +14,7 @@ resource "google_compute_firewall" "allow-in-ssh" {
   }
   source_ranges = ["35.235.240.0/20"]
   #source_tags = ["myvm"]
-  target_tags = ["myvm"]
+  target_tags = ["my-vm"]
 }
 
 # resource "google_compute_firewall" "egress-deny" {
