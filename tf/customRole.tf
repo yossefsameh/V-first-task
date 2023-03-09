@@ -1,3 +1,7 @@
+resource "google_service_account" "mygs-sa" {
+  account_id   = "mygs-sa"
+  display_name = "mygs-sa"
+}
 resource "google_project_iam_custom_role" "my-custom-list-objects" {
   role_id     = "listobjects"
   #role_id     = var.role-id
@@ -7,17 +11,16 @@ resource "google_project_iam_custom_role" "my-custom-list-objects" {
   permissions = ["storage.objects.list"]
 }
 
-# resource "google_project_iam_binding" "vm-role11" {
-#     #role = google_project_iam_custom_role.my-custom-role.id
-#     #role = "roles/cloudasset.assets.listStorageBuckets"
-#     role = "roles/container.admin"
+resource "google_project_iam_binding" "gs-binding" {
+    role = google_project_iam_custom_role.my-custom-list-objects.id
+ 
 
-#     project     = "abdelrahman-377520"
+    project     = "abdelrahman-377520"
 
-#     members = [
-#       "serviceAccount:${google_service_account.my-sa.email}",
+    members = [
+      "serviceAccount:${google_service_account.mygs-sa.email}",
 
 
-#     ]
+    ]
   
-# }
+}

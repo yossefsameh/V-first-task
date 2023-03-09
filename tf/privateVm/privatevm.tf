@@ -3,7 +3,7 @@ resource "google_compute_instance" "my-vm" {
   machine_type = var.vm-type
   zone         = var.vm-zone
   tags = [var.vm-name]
-
+  allow_stopping_for_update = true 
   boot_disk {
     initialize_params {
       image = var.vm-os

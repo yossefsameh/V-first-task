@@ -1,13 +1,10 @@
 variable account-id {
   type        = string
 }
-# variable role-id {
-#   type        = string
-# }
-# variable role-permissions {
-#   type        = list
-# }
+variable binding-role {
 
-# variable role-project-id {
-#     type      = string
-# }
+}
+
+variable binding-project {
+  
+}
