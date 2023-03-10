@@ -17,7 +17,7 @@ spec:
       
       containers:
       - name: nexus
-        image: gcr.io/abdelrahman-377520/nexus-img:1
+        image: gcr.io/abdelrahman-377520/nexus-img:2
         ports:
         - containerPort: 8081
       
