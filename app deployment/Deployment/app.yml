@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: webapp
-        image: yossefsameh/myappimg:2
+        image: gcr.io/abdelrahman-377520/myappimg:2
         ports:
         - containerPort: 8000
         envFrom:
